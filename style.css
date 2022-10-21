@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+mark {
+  background-color: transparent;
+}
+
+:root {
+  /* Colors */
+
+  --Primary-red: hsl(1, 90%, 64%);
+  --Primary-Blue: hsl(219, 85%, 26%);
+
+  --very-light-blue: hsl(210, 60%, 98%);
+  --light-blue-1: hsl(211, 68%, 94%);
+  --light-blue-2: hsl(205, 33%, 90%);
+  --secundary-blue: hsl(219, 14%, 63%);
+  --dark-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+
+  /* Typography*/
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+}
+
+header,
+main,
+footer {
+  width: 37.5rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/*-----------HEADER------------ */
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem auto;
+}
+
+.status {
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.status p {
+  color: var(--very-dark-blue);
+}
+
+.status p:last-child {
+  width: 3rem;
+  height: 2.5rem;
+  border-radius: 0.3rem;
+  margin: auto;
+  text-align: center;
+  color: white;
+  background-color: var(--Primary-Blue);
+}
+
+.clear {
+  color: var(--secundary-blue);
+}
+
+/* ------ main ------------- */
+
+.notification {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 0.5rem;
+}
+
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  align-self: baseline;
+}
+
+.content {
+  flex-direction: column;
+}
+
+.message {
+  color: var(--secundary-blue);
+}
+
+.unread {
+  background-color: var(--very-light-blue);
+  border-radius: 1rem;
+}
+
+.unread .message::after {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--Primary-red);
+  display: inline-block;
+}
+
+.name {
+  font-weight: 800;
+  color: var(--very-dark-blue);
+}
+
+.post {
+  color: var(--dark-blue);
+}
+
+.group {
+  color: var(--Primary-Blue);
+  font-weight: 800;
+}
+
+.time {
+  color: var(--light-blue-2);
+}
+
+.privateMessage {
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 0.1rem solid var(--light-blue-1);
+  border-radius: 0.6rem;
+  color: var(--secundary-blue);
+}
+
+.picturePost {
+  width: 5rem;
+  height: 5rem;
+  align-self: baseline;
+}
+
+footer {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: var(--very-light-blue);
+}
+footer a {
+  color: var(--Primary-Blue);
+}
